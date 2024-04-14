@@ -1,0 +1,130 @@
+button{
+    cursor: pointer;
+}
+
+#customerPage{
+    width: 100%;
+    height: calc(100vh - 60px);
+    
+    /* margin-top: 30px;
+    margin-left: 3vw;
+    background-color: #F3EDEC;
+    box-shadow: 0 0 4px 1px rgb(168, 168, 168);
+    border-radius: 20px; */
+}
+
+#customerPageSelect{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+#goToIntroduceButton, #goToHowButton, #goToQuestionButton{
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgba(195, 165, 48, 0.482);
+    box-shadow: 0 0 5px 2px rgba(41, 38, 38, 0.527);
+}
+
+#goToIntroduceButton:hover,
+#goToHowButton:hover,
+#goToQuestionButton:hover{
+    scale: 1.1;
+    transition: all 1s;
+}
+
+h1{
+    margin: 0 auto;
+    align-self: flex-start;
+    font-size: 35px;
+    margin-top: 30px;
+    margin-left: 4vw;
+    font-weight: bold;
+}
+
+p{
+    color: rgb(104, 104, 104);
+    font-size: 15px;
+}
+
+.customer-container{
+    font-family: "맑은 고딕";
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 90%;
+    height: 100%;
+    align-self: center;
+    line-height: 30px;
+}
+
+.container{
+    width: 100%;
+    height: calc(100% - 70px);
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*소개*/
+
+#introduce{
+    display: flex;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+#introduceInner{
+    margin: 20px auto;
+}
+
+
+/*사용법*/
+
+#how{
+    display: none;
+    overflow: auto;
+}
+
+#howInner{
+    margin: 20px auto;
+}
+
+/*1:1문의*/
+
+#question{
+    display: none;
+    overflow: auto;
+}
+
+#questionInner h1{
+    margin: 20px auto;
+    align-self: auto;
+    font-weight: bold; 
+    line-height: 40px;
+}
+
+#questionInner p{
+    padding-top: 40px;
+}
+
+@media (max-width: 767px){
+    #customerPageSelect{
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #goToIntroduceButton, #goToHowButton, #goToQuestionButton{
+        width: 70px;
+    }
+
+    #questionInner p{
+        padding-top: 0;
+    }
+}

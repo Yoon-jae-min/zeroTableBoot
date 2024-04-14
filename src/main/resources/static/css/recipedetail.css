@@ -1,0 +1,17 @@
+.dark .card {
+    background-color: rgb(56, 56, 56);
+}
+
+.dark .card { background-color: rgba(56,56,56,1); }
+
+@mixin sr-only-focusable() {
+    &:active,
+    &:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      overflow: visible;
+      clip: auto;
+      white-space: normal;
+    }
+  }

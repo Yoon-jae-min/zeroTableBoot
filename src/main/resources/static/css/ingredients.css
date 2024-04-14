@@ -1,0 +1,456 @@
+button{
+    cursor: pointer;
+}
+
+#ingredientsPage{
+    width: 100%;
+    height: calc(100vh - 60px);
+    /* overflow: auto; */
+    scrollbar-width: thin;
+    scrollbar-color: #a8a8a860 #e6e6e6;
+
+    /* margin-top: 30px;
+    margin-left: 3vw; 
+    background-color: #F3EDEC;
+    box-shadow: 0 0 4px 1px rgb(168, 168, 168);
+    border-radius: 20px; */
+}
+
+#searchAndButton{
+    height: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 30px;
+    position: relative;
+}
+
+#inputBox{
+    position: absolute;
+    top: 110px;
+    right: 11%;
+    border: 2px solid #91acbb;
+    box-shadow: 0 0 4px 1px #4e7084;
+    background-color: #F3EDEC;
+    width: 250px;
+    height: 0;
+    opacity: 0;
+    transition: all 1s;
+    border-radius: 10px;
+    z-index: 49;
+    overflow: hidden;
+}
+
+#inputBox li{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#inputBox hr{
+    width: 70%;
+    margin: 0 auto;
+}
+
+#inputBox input{
+    height: 20px;
+    border-radius: 5px;
+    background-color: #c7dce86b;
+    border-color: #c7dce86b;
+}
+
+#inputBox select{
+    border-radius: 5px;
+    height: 20px;
+    border-width: 2px;
+    width: 100px;
+    appearance: none;
+    background-color: #c7dce86b;
+    border-color: #c7dce86b;
+}
+
+#inputBox button{
+    border: none;
+    background-color: #F3EDEC;
+    width: 70%;
+    height: 60%;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#inputBox button img{
+    height: 25px;
+}
+
+#inputBox.addBox{
+    height: 250px;
+    opacity: 1;
+    transition: all 1s;
+}
+
+
+#searchAndButton form{
+    height: 60%;
+    width: 60%;
+
+    box-shadow: 0 0 4px 4px rgba(128, 128, 128, 0.514);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#food-search-button{
+    margin-left: 10px;
+    width: 3%;
+    background: none;
+    border: none;
+    height: 50%;
+    background-image: url("../images/searchBtn.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+#food-search-box{
+    width: 85%;
+    background-color: rgba(255, 255, 255, 0);
+    outline: none;
+    border: none;
+}
+
+#food-reset-button{
+    margin-right: 10px;
+    background: none;
+    border: none;
+    width: 3%;
+    height: 40%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../images/resetBtn.svg");
+}
+
+#foodInputButton{
+    box-shadow: 0 0 4px 4px gray;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-image: url("../images/plus.svg");
+    transition: transform 1s;
+    z-index: 50;
+    position: relative;
+}
+
+#foodInputButton.buttonClick{
+    transform: rotate(45deg);
+}
+
+
+#ingredientsLists{
+    margin: 20px auto;
+    width: 90%;
+    height: 100%;
+    /* overflow: auto; */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0 0 15px;
+    align-items: flex-start;
+    position: relative;
+    padding-top: 40px;
+    /* overflow-x: hidden; */
+}
+
+
+
+#attrIngredients{
+    padding: 0;
+    width: 92%;
+    height: 40px;
+    background-color: rgba(173, 173, 173, 0.664);
+    justify-content: center;
+    position: absolute;
+    top: 0;
+}
+
+/* PC용 버전 추가 */
+
+#attrIngredients{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    font-weight: bold;
+    border-radius: 10px;
+
+}
+
+#attrIngredients div:nth-child(1){
+    width: 30%;
+    box-sizing: border-box;
+    padding-left: 5%;
+}
+
+#attrIngredients div:nth-child(2),
+#attrIngredients div:nth-child(3),
+#attrIngredients div:nth-child(4){
+    width: 20%;
+    text-align: center;
+}
+
+#attrIngredients div:nth-child(5){
+    width: 10%;
+}
+
+#ingredientsLists section{
+    width: 100%;
+    height: calc(100% - 160px);
+    overflow-y:scroll;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.eachIngredient{
+    box-shadow: 0 0 4px 2px rgba(128, 128, 128, 0.56);
+    background-color: #f3edec74;
+    width: 95%;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px auto 15px;
+    margin-left: 8px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+
+.eachIngredient p{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    width: 30%;
+
+    box-sizing: border-box;
+    padding-left: 6%;
+}
+
+.eachIngredient hr:nth-child(2){
+    display: none;
+}
+
+.eachIngredient p:nth-child(3){
+    font-weight: initial;
+    font-size: initial;
+    width: 20%;
+    justify-content: center;
+    padding-left: 0;
+}
+
+.eachIngredient p:nth-child(3) label{
+    display: none;
+}
+
+.ingredientDetails{
+    height: 50px;
+    display: flex;
+    transition: max-height 0.5s ease-out;
+    max-height: 0;
+    align-items: center;
+}
+
+.ingredientDetails li{
+    margin-top: 20px;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ingredientSetting{
+    display: none;
+}
+
+.ingredientSetting input,
+.ingredientSetting select{
+    height: 20px;
+    border-radius: 5px;
+    background-color: #e1e7ea6b;
+    border-color: #d4dee46b;
+}
+
+.ingredientText.hideInput{
+    display: none;
+}
+
+.ingredientSetting.showInput{
+    display: block;
+}
+
+.ingredientDetails li:nth-child(4){
+    margin-left: 20%;
+}
+
+.ingredientDetails li:nth-child(6){
+    margin-left: 35%;
+}
+
+.updateDeleteButton{
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 4px 1px #4e7084;
+    width: 30px;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.updateDeleteButton.buttonClick{
+    display: none;
+}
+
+.updateButton, .deleteButton, .okButton{
+    box-sizing: border-box;
+    padding: 5px;
+    border-radius: 50%;
+    box-shadow: 0 0 4px 1px #4e7084;
+    cursor: pointer;
+    width: 30px;
+}
+
+.okButton{
+    display: none;
+    margin: 0 auto;
+}
+
+.okButton.showButton{
+    display: block;
+}
+
+.ingredientDetails li:nth-child(6) div{
+    display: none;
+}
+
+.ingredientDetails li:nth-child(6) div.showButton{
+    display: block;
+}
+
+
+.ingredientDetails hr{
+    display: none;
+    background-color: rgba(128, 128, 128, 0.54);
+    margin: 0 10% 10px ;
+}
+
+.ingredientDetails label{
+    display: none;
+}
+
+
+
+
+
+@media (max-width: 767px){
+    #ingredientsLists{
+        padding-top: 0;
+    }
+
+    #attrIngredients{
+        display: none;
+    }
+
+    .eachIngredient{
+        width: 46%;
+        margin-right: calc((100% - 2 * 46%) / 3);
+        margin-left: 1%;
+        transition: height 0.5s ease-out;
+        flex-direction: column;
+        height: 80px;
+    }
+
+    .eachIngredient p{
+        height: 40px;
+        width: 100%;
+        cursor: pointer;
+        justify-content: center;
+        padding-left: 0;
+        font-size: medium;
+    }
+
+    .eachIngredient hr:nth-child(2){
+        margin: 0 auto;
+        display: block;
+        width: 60%;
+        border: 1px solid #0000001e;
+    }
+
+    .eachIngredient p:nth-child(3){
+        cursor: none;
+        width: 100%;
+        font-size: medium;
+    }
+
+    .ingredientDetails{
+        height: auto;
+        display: none;
+        transition: max-height 0.5s ease-out;
+        /* overflow: hidden; */
+        max-height: 0;
+    }
+
+    .ingredientDetails hr{
+        display: block;
+        background-color: rgba(128, 128, 128, 0.54);
+        margin: 0 10% 10px ;
+    }
+
+    .ingredientDetails li{
+        margin-top: 0;
+        margin-bottom: 10px;
+        margin-left: 0;
+        position: static;
+        height: auto;
+        width: 100%;
+        display: block;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    .ingredientDetails li:nth-child(4){
+        margin-left: 0;
+    }
+    
+    .ingredientDetails li:nth-child(6){
+        margin-left: 0;
+    }
+
+    .ingredientDetails label{
+        display: inline-block;
+    }
+
+    .ingredientDetails hr:nth-child(3), .ingredientDetails hr:nth-child(5){
+
+        border: 1px solid rgb(211, 211, 211);
+        margin: 0 15% 10px;
+    }
+    
+    .eachIngredient.detail .ingredientDetails{
+        display: flex;
+        max-height: 2000px;
+    }
+
+    .ingredientSetting input{
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+}

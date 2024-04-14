@@ -1,0 +1,52 @@
+button, a {
+    cursor: pointer;
+}
+div {
+    display: block;
+}
+#communityPage{
+    width: 100%;
+    height: 100%;
+
+    /* margin-top: 30px;
+    margin-left: 3vw;
+    background-color: #F3EDEC;
+    box-shadow: 0 0 4px 1px rgb(168, 168, 168);
+    border-radius: 20px; */
+}
+
+#communityPageSelect {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+#notiButton, #freeButton, #reciButton{
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    border: none;
+    background-color: rgba(195, 165, 48, 0.482);
+    box-shadow: 0 0 5px 2px rgba(41, 38, 38, 0.527);
+}
+
+#notiButton:hover,
+#freeButton:hover,
+#reciButton:hover{
+    scale: 1.1;
+    transition: all 1s;
+}
+
+
+
+.containerNone{
+    display: none;
+}
+
+.containerActive{
+    display: flex;
+}

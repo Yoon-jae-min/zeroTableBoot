@@ -1,0 +1,141 @@
+#contents_area_full {
+  border: 1px solid #e6e7e8;
+  padding: 0 0 20px 0;
+  background: #fff;
+  position: relative;
+}
+div {
+  display: block;
+  unicode-bidi: isolate;
+}
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  unicode-bidi: isolate;
+}
+.rcp_m_list2 {
+  margin-top: 30px;
+  padding: 0 22px;
+}
+.common_sp_list_li {
+  list-style: none;
+  padding: 0;
+  margin: 0 12px 40px 0;
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+}
+.common_sp_list_ul {
+  margin: 0;
+  vertical-align: top;
+}
+.common_sp_list_ul.ea4 li {
+  width: 282px;
+}
+.rcp_m_list2 .ranking_num.st1 {
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  z-index: 100;
+}
+.rcp_m_list2 .ranking_num {
+  background: #fff;
+  border: 1px solid #bbb;
+  box-shadow: 3px 3px 0 rgba(0,0,0,0.08);
+  min-width: 36px;
+  text-align: center;
+  border-radius: 4px;
+  line-height: 1;
+  padding: 8px 7px 10px;
+  letter-spacing: -0.03em;
+  vertical-align: unset;
+}
+p{
+  margin: 0 0 10px;
+}
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+.common_sp_thumb {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.common_sp_caption {
+  padding: 10px 2px;
+}
+.common_sp_caption_tit.line2 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  word-wrap: break-word;
+  white-space: normal;
+  line-height: 1.5;
+}
+.common_sp_caption_rv_name {
+  color: #999;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 14px;
+  padding: 0 1px 7px 0;
+}
+.common_sp_caption_rv {
+  vertical-align: super;
+  line-height: 1;
+  margin: 0 0 9px 0;
+}
+.common_sp_caption_rv_star {
+  vertical-align: 1px;
+}
+.common_sp_caption_rv_star img {
+  width: 14px;
+  margin: 0;
+}
+.common_sp_caption_rv_ea {
+  color: #999;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 12px;
+  vertical-align: middle;
+  padding-left: 1px;
+  line-height: normal;
+}
+.common_sp_caption_buyer {
+  color: #999;
+  font-size: 13px;
+  margin-left: 2px;
+}
+img {
+  vertical-align: middle;
+}
+img {
+  border: 0;
+}
+img {
+  overflow-clip-margin: content-box;
+  overflow : clip;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+a {
+  background-color: transparent;
+}
+a.-webkit-any-link {
+  cursor: pointer;
+}

@@ -1,0 +1,364 @@
+*{
+    font-family: "Roboto", sans-serif;
+    color: #2b2b2b;
+}
+
+
+html{
+    scrollbar-width: thin;
+    scrollbar-color: #a8a8a860 #e6e6e6;
+}
+
+body{
+    width: calc(100vw - 5px);
+    margin: 0 auto;
+    margin-right: 5px;
+    margin-bottom: 3px;
+    height: calc(100vh - 200px);
+    overflow: hidden;
+}
+
+/*--------헤더----------------*/
+header{
+    padding-left: 5px;
+    border-radius: 10px 10px 0 0;
+    margin: 3px 10px 0 3px;
+    width: calc(100% - 10px);
+    height: 60px;
+    display: flex;
+    background-color: #c2bcb5;
+    box-shadow: 0 0 20px 2px rgb(91, 91, 91);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+header div, header a{
+    border-left: 1px solid #3f3a3647; 
+    border-right: 1px solid #3f3a3647;
+}
+
+#menu-button,
+#noticeButton, 
+#search, 
+#logo-img, 
+#logo-text, 
+#loginButton{
+    height: 100%;
+}
+
+#logo-img{
+    width: 30px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-img img{
+    width: 30px;
+    height: 30px;
+}
+
+#logo-text{
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    opacity: 1;
+    transition: width 1s, opacity 1s;
+}
+
+#logo-text img{
+    width: 170px;
+    height: 30px;
+}
+
+#menu-button, #noticeButton, #loginButton{
+    width: 50px;
+}
+
+#menu-button{
+    display: flex;
+    opacity: 0;
+    width: 0px;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+
+#menu-button img{
+    width: 30px;
+    height: 30px;
+}
+
+#search{
+    width: calc(100% - 300px);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#search form{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+#search-box{
+    margin-left: 6px;
+    height: 80%;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: #d2e2d800;
+    font-size: 15px;
+}
+
+#reset-button{
+    margin-right: 10px;
+    background: none;
+    border: none;
+    width: 3%;
+    height: 40%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("../images/resetBtn.svg");
+}
+
+#search-button{
+    margin-left: 10px;
+    width: 20px;
+    background: none;
+    border: none;
+    height: 50%;
+    background-image: url("../images/searchBtn.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+#noticeButton, #loginButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#noticeButton img, #loginButton img{
+    width: 30px;
+    height: 30px;
+}
+
+#logo-img img:hover, 
+#logo-text img:hover, 
+#noticeButton img:hover, 
+#loginButton img:hover,
+#search-button:hover,
+#reset-button:hover{
+    scale: 1.1;
+    transition: all 1s;
+}
+
+
+/*---------본문----------------*/
+main{
+    margin-top: 60px;
+    margin-right: 10px;
+    /* height: calc(100vh - 100px); */
+    width: calc(100vw - 3px);
+    display: flex;
+    justify-content: right;
+    position: relative;
+}
+
+#menu{
+    position: fixed;
+    left: 0;
+    background-color: #c2bcb5;
+    border-radius: 0 0 0 10px;
+    margin-left: 3px;
+    width: 60px;
+    height: calc(100% - 68px);
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: all 1s;
+    font-size: 15px;
+    box-shadow: 0 10px 10px 2px rgb(99, 99, 99);
+    z-index: 101;
+}
+
+#menu.active{
+    width: 210px;
+    transition: width 1s;
+}
+
+.menu-content{
+    text-align: center;
+    color: #444;
+    width: 100%;
+    height: 8%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 20px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.menu-content.active{
+    background: linear-gradient(to left, #ffffff80 50%, #7d746a00 50%);
+    background-size: 200% 100%;
+    position: 0 0;
+    transition: all 1s;
+}
+
+.menu-content.active:hover{
+    background-position: -100% 0;
+}
+
+.menu-content a{
+    text-decoration: none;
+}
+
+.menu-content a:visited{
+    color: #444;
+}
+
+.menu-content-icon{
+    margin-left: 17px;
+}
+
+.menu-content-icon img{
+    margin-left: 3px;
+    width: 20px;
+    height: 20px;
+}
+
+.menu-content-text{
+    display: none;
+    margin-left: 15px;
+    transition-delay: 1s;
+    transition: all 1s;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.menu-content-text.active{
+    display: flex;
+    text-align: center;
+    animation: fadeIn 1s ease forwards;
+}
+
+article.commonContent{
+    transition: all 1s;
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 100px);
+    padding: 0;
+}
+
+article.commonContent.active{
+    transition: all 1s;
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 260px);
+    
+}
+
+/*홈페이지*/
+
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+@media (max-width: 1279px) {
+
+}
+
+
+@media (max-width: 767px) {
+    #logo-text{
+        width: 0px;
+        transition: width 0.1s;
+        opacity: 0;
+    }
+    #menu-button{
+        width: 50px;
+        font-size: 20px;
+        opacity: 1;
+        animation: fadeIn 0.5s ease forwards;
+    }
+    #search{
+        width: calc(100% - 180px);
+    }
+    #menu{
+        width: 0;
+        opacity: 0;
+        display: none;
+        transition: all 1s;
+        border-radius: 0 0 10px 10px;
+    }
+
+
+    .menu-content.mobileMenuTouchActive{
+        background: none;
+        background-color: #ffffff80;
+    }
+    #menu.active{
+        display: flex;
+        width: 220px;
+        opacity: 1;
+    }
+
+    article.commonContent{
+        width: 100vw;
+        transition: all 1s;
+    }
+    article.commonContent.active{
+        width: 100vw;
+    }
+
+    #homePage{
+        display: grid;
+        transition: all 1s;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "item1"
+            "item2"
+            "item3"
+            "item4"
+            "item5";
+    }
+}

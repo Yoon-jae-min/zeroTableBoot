@@ -1,0 +1,42 @@
+#homePage{
+    height: calc(100vh - 120px);
+    margin-top: 30px;
+    width: 100%;
+    margin-right: 3vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 17px;
+    grid-template-areas: 
+        "item1 item1 item2"
+        "item3 item4 item2"
+        "item3 item4 item5";
+}
+
+#homePage item{
+    background-color: #F3EDEC;
+    box-shadow: 0 0 4px 1px rgb(168, 168, 168);
+    border-radius: 20px;
+}
+
+#homeitem1{
+    grid-area: item1;
+}
+#homeitem2{
+    grid-area: item2;
+}
+#homeitem3{
+    grid-area: item3;
+}
+#homeitem4{
+    grid-area: item4;
+}
+#homeitem5{
+    grid-area: item5;
+}
+
+@media (max-width: 767px){
+    #homePage{
+        margin-left: 3vw;
+    }
+}

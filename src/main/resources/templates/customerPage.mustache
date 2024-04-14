@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>common/commonHead}}
+    <link href="../css/customer.css" rel="stylesheet">
+    <title>Zero Table - customer</title>
+</head>
+<body>
+    {{>common/header}}
+    <main>
+        {{>common/menu}}
+        <article class="commonContent">
+            <div id="customerPage">
+                <div id="customerPageSelect">
+                    <button id="goToIntroduceButton" onclick="changeContainer('introduce')">소개</button>
+                    <button id="goToHowButton" onclick="changeContainer('how')">사용법</button>
+                    <button id="goToQuestionButton" onclick="changeContainer('question')">문의</button>
+                </div>
+                <div class="container containerActive" id="introduce">
+                    <h1 id="introduceTitle">Zero Table: 식재료 낭비 없는 삶을 위한 당신의 파트너</h1>
+                    <div class="customer-container" id="introduceInner">
+                        <p>환영합니다! Zero Table은 식재료 관리와 요리를 한 단계 업그레이드하고자 하는 모든 분들을 위한 웹사이트입니다.<br> 우리의 목표는 식재료의 낭비를 최소화하고, 그 과정에서 당신의 요리 경험을 풍부하게 만드는 것입니다.</p>
+                        <p>Zero Table을 사용하면 냉장고에 있는 식재료를 쉽게 관리할 수 있습니다.<br> 식재료를 입력하면, 해당 재료와 관련된 다양한 레시피를 검색해드립니다.<br> 이제 냉장고에 남은 재료로 무엇을 만들지 고민하지 않아도 됩니다.</p>
+                        <p>더불어, Zero Table은 식재료의 사용 기한을 체크하여 알림을 보내드립니다.<br> 사용 기한이 다가오는 식재료를 놓치지 않게 도와, 식품 낭비를 방지합니다.</p>
+                        <p>Zero Table과 함께라면, 냉장고 관리는 더 이상 번거로운 일이 아닙니다.<br> 오히려 새로운 요리를 발견하고, 식재료를 최대한 활용하는 즐거움을 느낄 수 있습니다.</p>
+                        <p>함께해서 기쁩니다. Zero Table과 함께 식재료 낭비 없는 삶을 시작해보세요!</p>
+                    </div>
+                </div>
+                <div class="container containerNone" id="how">
+                    <h1 id="howTitle">사용법</h1>
+                    <div class="customer-container" id="howInner">
+                        <p> Zero Table의 사용법은 간단합니다. <br>먼저, 웹사이트에 로그인하거나 회원가입을 합니다. 그런 다음, 냉장고에 있는 식재료를 입력합니다.<br> 이때, 식재료의 이름과 수량, 그리고 사용 기한을 입력하면 됩니다.</p>
+                        <p> 식재료를 입력하면, Zero Table은 해당 재료와 관련된 레시피를 검색해드립니다.<br> 검색 결과는 레시피의 이름, 요리 방법, 필요한 재료 등의 정보를 포함합니다.<br> 이 정보를 바탕으로 새로운 요리를 시도해 볼 수 있습니다.</p>
+                        <p>또한, Zero Table은 식재료의 사용 기한을 체크하여 알림을 보내드립니다.<br> 사용 기한이 다가오는 식재료가 있으면, 이메일이나 웹사이트 내의 알림을 통해 알려드립니다.<br> 이 기능을 통해 식재료를 시간 내에 사용하여 식품 낭비를 방지할 수 있습니다.</p>
+                        <p>Zero Table은 식재료 관리와 요리를 즐겁게 만드는 데 도움을 줍니다.<br> 함께해서 기쁩니다. Zero Table과 함께 식재료 낭비 없는 삶을 시작해보세요!</p>
+                    </div>
+
+                </div>
+                <div class="container containerNone" id="question">
+                    <div class="customer-container" id="questionInner">
+                        <div style="display: flex; flex-direction: column;">
+                            <div><h1>언제든지 문의하세요!</h1></div>
+                            <div style="width: 80%; margin: 80px auto; display: flex; justify-content: space-around;" >
+                                <p>문의사항을 이메일로 보내주세요.<br>영업일 기준으로 1일 이내에 답변해 드립니다.<br>sample@sample.com</p>
+                                <img style="width: 30%; height: 30%;" src="../images/email.svg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <script src="../javaScript/main.js"></script>
+    <script src="../javaScript/customer.js"></script>
+</body>
+</html>

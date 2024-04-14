@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {{>common/commonHead}}
+    <link href="../css/ingredients.css" rel="stylesheet">
+    <title>Zero Table - ingredients</title>
+</head>
+<body>
+    {{>common/header}}
+    <main>
+        {{>common/menu}}
+        <article class="commonContent">
+            <div id="ingredientsPage">
+                <div id="searchAndButton">
+                    <form>
+                        <button id="food-search-button" type="submit"></button>
+                        <input type="text" id="food-search-box" placeholder="search...">
+                        <button id="food-reset-button" type="reset"></button>
+                    </form>
+                    <button id="foodInputButton"></button>
+
+                    <div id="inputBox">
+                        <ul>
+                            <li>
+                                <label>재료명 :&nbsp;</label>
+                                <input type="text" placeholder="재료명">
+                            </li>
+                            <hr>
+                            <li>
+                                <label>수량 :&nbsp;</label>
+                                <input type="number" value="1" pattern="\d">
+                            </li>
+                            <hr>
+                            <li>
+                                <label>분류 :&nbsp;</label>
+                                <select>
+                                    <option value="fruit">과일</option>
+                                    <option value="vegetable">채소/야채</option>
+                                    <option value="meat">육류</option>
+                                    <option value="seafood">해산물</option>
+                                    <option value="etc">기타</option>
+                                </select>
+                            </li>
+                            <hr>
+                            <li>
+                                <label>유통기한 :&nbsp;</label>
+                                <input type="date" max="2040-12-31" min="2000-01-01">
+                            </li>
+                            <hr>
+                            <li>
+                                <button id="addButton" onclick=""><img src="../images/addIngredient.svg"></button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="ingredientsLists">
+                    <div class="eachIngredient">
+                        <p class="ingredientName">샘플</p>
+                        <hr>
+                        <p>
+                            <label>수량:&nbsp;</label>
+                            <span class="ingredientText">2개</span>
+                            <span class="ingredientSetting"><input type="number"></span>
+                        </p>
+                        <ul class="ingredientDetails">
+                            <hr>
+                            <li>
+                                <label>분류:&nbsp;</label>
+                                <span class="ingredientText">기타</span>
+                                <span class="ingredientSetting">
+                                            <select>
+                                                <option name="category" value="fruit">과일</option>
+                                                <option name="category" value="vegetable">채소/야채</option>
+                                                <option name="category" value="meat">육류</option>
+                                                <option name="category" value="seafood">해산물</option>
+                                                <option name="category" value="etc">기타</option>
+                                            </select>
+                                        </span>
+                            </li>
+                            <hr>
+                            <li>
+                                <label>유통기한:&nbsp;</label>
+                                <span class="ingredientText">2024-12-14</span>
+                                <span class="ingredientSetting"><input type="date"></span>
+                            </li>
+                            <hr>
+                            <li>
+                                <img src="../images/menu-dots.svg" class="updateDeleteButton">
+                                <div>
+                                    <img src="../images/updateIngredient.svg" class="updateButton">
+                                    <img src="../images/deleteIngredient.svg" class="deleteButton">
+                                </div>
+                                <img src="../images/okButton.svg" class="okButton">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="eachIngredient"></div>
+                    <div class="eachIngredient"></div>
+                    <div class="eachIngredient"></div>
+                    <div class="eachIngredient"></div>
+
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <script src="../javaScript/main.js"></script>
+    <script src="../javaScript/ingredients.js"></script>
+</body>
+</html>
