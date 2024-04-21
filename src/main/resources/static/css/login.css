@@ -89,7 +89,7 @@ label:not(#checkBoxLabel){
 }
 
 #loginForm{
-    margin-top: 80px;
+    margin-top: 30px;
 }
 
 .loginInputBox{
@@ -230,6 +230,10 @@ label:not(#checkBoxLabel){
     box-shadow: 0 0 3px 1px #505050;
     background-color: rgba(186, 200, 195, 0.578);
 }
+
+#naver_id_login{
+}
+
 
 @media (max-width: 1279px) {
 
