@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymelead.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="../css/reset.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/login.css" rel="stylesheet">
+
+<!--    <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>-->
+<!--    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>-->
+    <title>Zero Table - login</title>
+</head>
+<body>
+    <header>
+        <a href="../html/index.html" id="logo-img"><img src="../images/logoImg.png"></a>
+        <a href="../html/index.html" id="logo-text"><img src="../images/logoText.png"></a>
+        <a href="#" id="menu-button"><img src="../images/menu-button.svg"></a>
+        <div id="search">
+            <form>
+                <button id="search-button" type="button"></button>
+                <input type="text" id="search-box" placeholder="search...">
+                <button id="reset-button" type="reset"></button>
+            </form>
+        </div>
+        <a href="#" id="noticeButton"><img src="../images/notify.svg"></a>
+        <!-- <div id="noticeBox"></div> -->
+
+
+        <a href="login" id="loginButton"><img src="../images/login.svg"></a>
+    </header>
+    <main>
+        <div id="menu">
+            <div class="menu-content">
+                <div class="menu-content-icon" id="dashboard"><img src="../images/DashBoard.svg"></div>
+                <p class="menu-content-text"><a href="home">Dashboard</a></p>
+            </div>
+            <div class="menu-content">
+                <div class="menu-content-icon" id="recipe"><img src="../images/recipe.svg"></div>
+                <p class="menu-content-text"><a href="recipes">Recipe</a></p>
+            </div>
+            <div class="menu-content">
+                <div class="menu-content-icon" id="myIngredients"><img src="../images/ingredients.svg"></div>
+                <p class="menu-content-text"><a href="ingredients">My ingredients</a></p>
+            </div>
+            <div class="menu-content">
+                <div class="menu-content-icon" id="community"><img src="../images/community.svg"></div>
+                <p class="menu-content-text"><a href="community">Community</a></p>
+            </div>
+            <div class="menu-content">
+                <div class="menu-content-icon" id="customer"><img src="../images/customerService.svg"></div>
+                <p class="menu-content-text"><a href="customer">Customer</a></p>
+            </div>
+            <!-- <div id="settingContainer" class="menu-content">
+                <div class="menu-content-icon" id="Setting"><img src="../images/setting.svg"></div>
+                <p class="menu-content-text"><a href="#">Setting</a></p>
+            </div> -->
+        </div>
+        <article class="commonContent">
+            <div id="loginPage">
+                <div id="loginPageSelect">
+                    <button id="goToLoginButton" onclick="changeContainer(event, 'login')">로그인</button>
+                    <button id="goToJoinButton" onclick="changeContainer(event, 'join')">회원가입</button>
+                </div>
+                <div class="container containerActive" id="login">
+                    <h1 id="loginTitle">로그인</h1>
+<!--                    <div id="naver_id_login" style="text-align: center; margin-top: 20px;"></div>-->
+                    <div class="form-container" id="loginForm">
+                        <form method="post" action="/userLogin">
+                            <label>이메일</label>
+                            <input class="loginInputBox" id="loginEmailBox" name="emailId" type="text">
+                            <label>패스워드</label>
+                            <input class="loginInputBox" id="loginPasswordBox" name="password" type="password">
+                            <label id="checkBoxLabel">
+                                <input id="rememberCheckBox" type="checkbox">
+                                <img id="checkCustom">
+                            </label>
+                            <span>아이디 저장</span><a id="goToFindButton" href="#">비밀번호 찾기</a>
+                            <button id="loginSubmit" onclick="submit">로그인</button>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="container containerNone" id="join">
+                    <h1 id="joinTitle">회원가입</h1>
+                    <div class="form-container" id="joinForm">
+                        <form method="POST" action="/userJoin">
+                            <label>이름</label>
+                            <input class="joinInputBox" id="joinNameBox" name="userName" type="text">
+                            <label>이메일</label>
+                            <input class="joinInputBox" id="joinEmailBox" name="emailId" type="text">
+                            <p class="joinCheck">중복 메시지</p>
+                            <label>패스워드</label>
+                            <input class="joinInputBox" id="joinPasswordBox" name="password" type="password">
+                            <input class="joinInputBox" id="joinPasswordCheckBox" type="password">
+                            <p class="joinCheck">불일치 메시지</p>
+                            <button id="joinSubmit" type="submit">가입</button>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="container containerNone" id="find">
+                    <h1 id="findTitle">비밀번호 찾기</h1>
+                    <div class="form-container" id="findForm">
+                        <form>
+                            <label>이메일</label>
+                            <input class="findInputBox" id="findEmailBox" type="text">
+                            <button id="findSubmit">찾기</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <script src="../javaScript/main.js"></script>
+    <script src="../javaScript/login.js"></script>
+    <script th:inline="javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            var message = /*[[${message}]]*/ null;
+                        if(message) {
+                          alert(message);
+                        }
+        });
+    </script>
+
+<!--    <script type="text/javascript">-->
+<!--        var naver_id_login = new naver_id_login("qo8RpqcXjI3u8aV70FWv", "http://localhost:8080/home");-->
+<!--        var state = naver_id_login.getUniqState();-->
+<!--        naver_id_login.setButton("white", 2,50);-->
+<!--        naver_id_login.setDomain("localhost:8080");-->
+<!--        naver_id_login.setState(state);-->
+<!--        naver_id_login.setPopup();-->
+<!--        naver_id_login.init_naver_id_login();-->
+<!--    </script>-->
+</body>
+</html>

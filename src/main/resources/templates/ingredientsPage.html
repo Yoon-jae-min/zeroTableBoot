@@ -1,14 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    {{>common/commonHead}}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="../css/reset.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
     <link href="../css/ingredients.css" rel="stylesheet">
     <title>Zero Table - ingredients</title>
 </head>
 <body>
-    {{>common/header}}
+    <header>
+        <a href="../html/index.html" id="logo-img"><img src="../images/logoImg.png"></a>
+        <a href="../html/index.html" id="logo-text"><img src="../images/logoText.png"></a>
+        <a href="#" id="menu-button"><img src="../images/menu-button.svg"></a>
+        <div id="search">
+            <form>
+                <button id="search-button" type="button"></button>
+                <input type="text" id="search-box" placeholder="search...">
+                <button id="reset-button" type="reset"></button>
+            </form>
+        </div>
+        <a href="#" id="noticeButton"><img src="../images/notify.svg"></a>
+        <!-- <div id="noticeBox"></div> -->
+
+
+        <a href="login" id="loginButton"><img src="../images/login.svg"></a>
+    </header>
     <main>
-        {{>common/menu}}
+        <div id="menu">
+            <div class="menu-content">
+                <div class="menu-content-icon" id="dashboard"><img src="../images/DashBoard.svg"></div>
+                <p class="menu-content-text"><a href="home">Dashboard</a></p>
+            </div>
+            <div class="menu-content">
+                <div class="menu-content-icon" id="recipe"><img src="../images/recipe.svg"></div>
+                <p class="menu-content-text"><a href="recipes">Recipe</a></p>
+            </div>
+            <div class="menu-content">
+                <div class="menu-content-icon" id="myIngredients"><img src="../images/ingredients.svg"></div>
+                <p class="menu-content-text"><a href="ingredients">My ingredients</a></p>
+            </div>
+            <div class="menu-content">
+                <div class="menu-content-icon" id="community"><img src="../images/community.svg"></div>
+                <p class="menu-content-text"><a href="community">Community</a></p>
+            </div>
+            <div class="menu-content">
+                <div class="menu-content-icon" id="customer"><img src="../images/customerService.svg"></div>
+                <p class="menu-content-text"><a href="customer">Customer</a></p>
+            </div>
+            <!-- <div id="settingContainer" class="menu-content">
+                <div class="menu-content-icon" id="Setting"><img src="../images/setting.svg"></div>
+                <p class="menu-content-text"><a href="#">Setting</a></p>
+            </div> -->
+        </div>
         <article class="commonContent">
             <div id="ingredientsPage">
                 <div id="searchAndButton">

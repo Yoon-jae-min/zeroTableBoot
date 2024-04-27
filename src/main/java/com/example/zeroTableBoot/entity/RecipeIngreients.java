@@ -15,6 +15,6 @@ public class RecipeIngreients {
     private Recipes recipes;
     @Column(nullable = false)
     private Long quantity;
-    @Column(columnDefinition = "varchar(255) CHECK (status IN ('', '', ''))", nullable = false)
+    @Column(nullable = false)
     private String unit;
 }

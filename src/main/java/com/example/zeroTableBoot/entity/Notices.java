@@ -14,6 +14,6 @@ public class Notices {
     private String body;
     @Column(nullable = false)
     private String noticeImgUrl;
-    @Column(columnDefinition = "integer default 0", nullable = false)
+    @Column(nullable = false)
     private Long watchCount;
 }

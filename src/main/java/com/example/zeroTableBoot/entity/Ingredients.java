@@ -16,9 +16,9 @@ public class Ingredients {
     private Users users;
     @Column(nullable = false)
     private Long quantity;
-    @Column(columnDefinition = "varchar(255) default '개' CHECK (status IN ('개', '', ''))", nullable = false)
+    @Column(nullable = false)
     private String unit;
-    @Column(columnDefinition = "varchar(255) default '기타' CHECK (status IN ('기타', '한식', '중식', '일식'))", nullable = false)
+    @Column(nullable = false)
     private String category;
     @Column(nullable = false)
     private LocalDateTime expirationDate;

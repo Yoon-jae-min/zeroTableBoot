@@ -152,7 +152,7 @@ button{
 #ingredientsLists{
     margin: 20px auto;
     width: 90%;
-    height: 100%;
+    height: auto;
     /* overflow: auto; */
     display: flex;
     flex-wrap: wrap;

@@ -13,12 +13,12 @@ public class Recipes {
     private String howTo;
     @Column
     private Long time;
-    @Column(columnDefinition = "varchar(255) default '기타' CHECK (status IN ('기타', '한식', '중식', '일식'))", nullable = false)
+    @Column(nullable = false)
     private String category;
-    @Column(columnDefinition = "varchar(255) default '/image/default'", nullable = false)
+    @Column(nullable = false)
     private String recipeImgUrl;
-    @Column(columnDefinition = "integer default 0", nullable = false)
+    @Column(nullable = false)
     private Long watchCount;
-    @Column(columnDefinition = "varchar(255) CHECK (status IN ('일반', '공유'))", nullable = false)
+    @Column(nullable = false)
     private String recipeType;
 }

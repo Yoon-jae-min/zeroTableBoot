@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="../css/reset.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/home.css" rel="stylesheet">
+
+<!--    <script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>-->
+<!--    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>-->
+    <title>Zero Table - home</title>
+</head>
+<body>
+    <header>
+        <a href="home" id="logo-img"><img src="../images/logoImg.png"></a>
+        <a href="home" id="logo-text"><img src="../images/logoText.png"></a>
+        <a href="#" id="menu-button"><img src="../images/menu-button.svg"></a>
+        <div id="search">
+            <form>
+                <button id="search-button" type="button"></button>
+                <input type="text" id="search-box" placeholder="search...">
+                <button id="reset-button" type="reset"></button>
+            </form>
+        </div>
+        <a href="#" id="noticeButton"><img src="../images/notify.svg"></a>
+        <!-- <div id="noticeBox"></div> -->
+
+
+        <a href="login" id="loginButton"><img src="../images/login.svg"></a>
+    </header>
+    <main>
+        <div id="menu">
+            <div class="menu-content">
+                <div class="menu-content-icon" id="dashboard"><img src="../images/DashBoard.svg"></div>
+                <p class="menu-content-text"><a href="home">Dashboard</a></p>
+            </div>
+            <div class="menu-content">
+                <div class="menu-content-icon" id="recipe"><img src="../images/recipe.svg"></div>
+                <p class="menu-content-text"><a href="recipes">Recipe</a></p>
+            </div>
+            <div class="menu-content">
+                <div class="menu-content-icon" id="myIngredients"><img src="../images/ingredients.svg"></div>
+                <p class="menu-content-text"><a href="ingredients">My ingredients</a></p>
+            </div>
+            <div class="menu-content">
+                <div class="menu-content-icon" id="community"><img src="../images/community.svg"></div>
+                <p class="menu-content-text"><a href="community">Community</a></p>
+            </div>
+            <div class="menu-content">
+                <div class="menu-content-icon" id="customer"><img src="../images/customerService.svg"></div>
+                <p class="menu-content-text"><a href="customer">Customer</a></p>
+            </div>
+            <!-- <div id="settingContainer" class="menu-content">
+                <div class="menu-content-icon" id="Setting"><img src="../images/setting.svg"></div>
+                <p class="menu-content-text"><a href="#">Setting</a></p>
+            </div> -->
+        </div>
+        <article class="commonContent">
+            <div id="homePage">
+                <item id="homeitem1"></item>
+                <item id="homeitem2"></item>
+                <item id="homeitem3"></item>
+                <item id="homeitem4"></item>
+                <item id="homeitem5"></item>
+            </div>
+        </article>
+
+    </main>
+
+    <script src="../javaScript/main.js"></script>
+    <script th:inline="javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            var message = /*[[${message}]]*/ null;
+                        if(message) {
+                          alert(message);
+                        }
+        });
+    </script>
+
+<!--    <script type="text/javascript">-->
+<!--        var naver_id_login = new naver_id_login("qo8RpqcXjI3u8aV70FWv", "http://localhost:8080/home");-->
+<!--        // 접근 토큰 값 출력-->
+<!--        alert(naver_id_login.oauthParams.access_token);-->
+<!--        // 네이버 사용자 프로필 조회-->
+<!--        naver_id_login.get_naver_userprofile("naverSignInCallback()");-->
+<!--        // 네이버 사용자 프로필 조회 이후 프로필 정보를 처리할 callback function-->
+<!--        function naverSignInCallback() {-->
+<!--          alert(naver_id_login.getProfileData('email'));-->
+<!--          alert(naver_id_login.getProfileData('nickname'));-->
+<!--          alert(naver_id_login.getProfileData('age'));-->
+<!--        }-->
+<!--    </script>-->
+</body>
+</html>

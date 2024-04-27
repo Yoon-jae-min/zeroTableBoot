@@ -17,7 +17,7 @@ public class Frees {
     @Lob
     @Column(nullable = false)
     private String body;
-    @Column(columnDefinition = "integer default 0", nullable = false)
+    @Column(nullable = false)
     private Long watchCount;
     @Column(nullable = false)
     private LocalDateTime time;
