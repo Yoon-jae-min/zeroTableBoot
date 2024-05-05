@@ -21,23 +21,28 @@ body{
 /*--------헤더----------------*/
 header{
     padding-left: 5px;
-    border-radius: 10px 10px 0 0;
+    /*border-radius: 10px 10px 0 0;
     margin: 3px 10px 0 3px;
-    width: calc(100% - 10px);
-    height: 60px;
-    display: flex;
     background-color: #c2bcb5;
     box-shadow: 0 0 20px 2px rgb(91, 91, 91);
+    width: calc(100% - 10px);
+    height: 60px;*/
+    width: 100%;
+    height: 80px;
+    display: flex;
+
     position: fixed;
     top: 0;
     left: 0;
     z-index: 100;
 }
 
+/*
 header div, header a{
     border-left: 1px solid #3f3a3647; 
     border-right: 1px solid #3f3a3647;
 }
+*/
 
 #menu-button,
 #noticeButton, 
@@ -49,6 +54,7 @@ header div, header a{
 }
 
 #logo-img{
+    margin-left: 1%;
     width: 30px;
     border: none;
     display: flex;
@@ -69,6 +75,7 @@ header div, header a{
     width: 170px;
     opacity: 1;
     transition: width 1s, opacity 1s;
+    margin-left: 5px;
 }
 
 #logo-text img{
@@ -76,7 +83,7 @@ header div, header a{
     height: 30px;
 }
 
-#menu-button, #noticeButton, #loginButton{
+#menu-button, #noticeButton, #loginButton, #myPageButton{
     width: 50px;
 }
 
@@ -103,12 +110,14 @@ header div, header a{
 }
 
 #search form{
-    width: 100%;
+    width: 70%;
     height: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0;
+    border-bottom: 1px solid #80808045;
+    margin-right: 7%
 }
 
 #search-box{
@@ -125,12 +134,13 @@ header div, header a{
     margin-right: 10px;
     background: none;
     border: none;
-    width: 3%;
+    width: 2%;
     height: 40%;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     background-image: url("../images/resetBtn.svg");
+    opacity: 0.3;
 }
 
 #search-button{
@@ -145,19 +155,21 @@ header div, header a{
     background-position: center center;
 }
 
-#noticeButton, #loginButton{
+#noticeButton, #loginButton, #myPageButton{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 1%;
 }
 
-#noticeButton img, #loginButton img{
+#noticeButton img, #loginButton img, #myPageButton img{
     width: 30px;
     height: 30px;
 }
 
 #logo-img img:hover, 
-#logo-text img:hover, 
+#logo-text img:hover,
+#myPageButton img:hover,
 #noticeButton img:hover, 
 #loginButton img:hover,
 #search-button:hover,
@@ -169,7 +181,7 @@ header div, header a{
 
 /*---------본문----------------*/
 main{
-    margin-top: 60px;
+    margin-top: 80px;
     margin-right: 10px;
     /* height: calc(100vh - 100px); */
     width: calc(100vw - 3px);
@@ -181,18 +193,18 @@ main{
 #menu{
     position: fixed;
     left: 0;
-    background-color: #c2bcb5;
-    border-radius: 0 0 0 10px;
+    background-color: #ffffff;
+    /*border-radius: 0 0 0 10px;
     margin-left: 3px;
+    margin-top: 4px;
+    box-shadow: 0 10px 10px 2px rgb(99, 99, 99);*/
     width: 60px;
     height: calc(100% - 68px);
-    margin-top: 4px;
     display: flex;
     align-items: center;
     flex-direction: column;
     transition: all 1s;
     font-size: 15px;
-    box-shadow: 0 10px 10px 2px rgb(99, 99, 99);
     z-index: 101;
 }
 
@@ -266,7 +278,7 @@ article.commonContent{
     transition: all 1s;
     display: flex;
     justify-content: center;
-    width: calc(100% - 100px);
+    width: calc(100% - 80px);
     padding: 0;
 }
 
@@ -274,7 +286,7 @@ article.commonContent.active{
     transition: all 1s;
     display: flex;
     justify-content: center;
-    width: calc(100% - 260px);
+    width: calc(100% - 240px);
     
 }
 

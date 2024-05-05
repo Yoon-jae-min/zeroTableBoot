@@ -26,11 +26,12 @@
                 <button id="reset-button" type="reset"></button>
             </form>
         </div>
+        <a href="/myPage" id="myPageButton" th:style="'opacity: ' + ${opacityValue}"><img src="../images/myPage.png"></a>
         <a href="#" id="noticeButton"><img src="../images/notify.svg"></a>
         <!-- <div id="noticeBox"></div> -->
 
 
-        <a href="login" id="loginButton"><img src="../images/login.svg"></a>
+        <a th:href="${loginUrl}" id="loginButton"><img th:src="${loginImgUrl}"></a>
     </header>
     <main>
         <div id="menu">
@@ -61,13 +62,13 @@
         </div>
         <article class="commonContent">
             <div id="recipePage">
-                <div id="recipeSearch">
-                    <form>
-                        <button id="recipe-search-button" type="button"></button>
-                        <input type="text" id="recipe-search-box" placeholder="search...">
-                        <button id="recipe-reset-button" type="reset"></button>
-                    </form>
-                </div>
+<!--                <div id="recipeSearch">-->
+<!--                    <form>-->
+<!--                        <button id="recipe-search-button" type="button"></button>-->
+<!--                        <input type="text" id="recipe-search-box" placeholder="search...">-->
+<!--                        <button id="recipe-reset-button" type="reset"></button>-->
+<!--                    </form>-->
+<!--                </div>-->
                 <div class="index-view">
                     <div class="category-list cf">
                         <a href="#">

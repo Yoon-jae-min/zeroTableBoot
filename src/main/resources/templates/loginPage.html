@@ -26,11 +26,11 @@
                 <button id="reset-button" type="reset"></button>
             </form>
         </div>
+        <a href="/myPage" id="myPageButton" th:style="'display: ' + ${myPageVisible}"><img src="../images/myPage.png"></a>
         <a href="#" id="noticeButton"><img src="../images/notify.svg"></a>
         <!-- <div id="noticeBox"></div> -->
 
-
-        <a href="login" id="loginButton"><img src="../images/login.svg"></a>
+        <a th:href="${loginUrl}" id="loginButton"><img th:src="${loginImgUrl}"></a>
     </header>
     <main>
         <div id="menu">
@@ -54,6 +54,11 @@
                 <div class="menu-content-icon" id="customer"><img src="../images/customerService.svg"></div>
                 <p class="menu-content-text"><a href="customer">Customer</a></p>
             </div>
+            <div class="menu-content">
+                <div class="menu-content-icon" id="myPage"><img src="../images/customerService.svg"></div>
+                <p class="menu-content-text"><a href="customer">My page</a></p>
+            </div>
+
             <!-- <div id="settingContainer" class="menu-content">
                 <div class="menu-content-icon" id="Setting"><img src="../images/setting.svg"></div>
                 <p class="menu-content-text"><a href="#">Setting</a></p>
@@ -87,7 +92,7 @@
                 <div class="container containerNone" id="join">
                     <h1 id="joinTitle">회원가입</h1>
                     <div class="form-container" id="joinForm">
-                        <form method="POST" action="/userJoin">
+                        <form method="post" action="/userJoin">
                             <label>이름</label>
                             <input class="joinInputBox" id="joinNameBox" name="userName" type="text">
                             <label>이메일</label>

@@ -23,11 +23,12 @@
                 <button id="reset-button" type="reset"></button>
             </form>
         </div>
+        <a href="/myPage" id="myPageButton" th:style="'opacity: ' + ${opacityValue}"><img src="../images/myPage.png"></a>
         <a href="#" id="noticeButton"><img src="../images/notify.svg"></a>
         <!-- <div id="noticeBox"></div> -->
 
 
-        <a href="login" id="loginButton"><img src="../images/login.svg"></a>
+        <a th:href="${loginUrl}" id="loginButton"><img th:src="${loginImgUrl}"></a>
     </header>
     <main>
         <div id="menu">
