@@ -1,28 +1,21 @@
 package com.example.zeroTableBoot.controller;
 
+import com.example.zeroTableBoot.service.UserService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
+@RequiredArgsConstructor
 public class movePage {
+    private final UserService userService;
+
     @GetMapping("/home")
     public String homePageGoto(Model model){
 
-        String id = SecurityContextHolder.getContext().getAuthentication().getName();
-        model.addAttribute("id", id);
-
-        if(id.equals("anonymousUser")){
-            model.addAttribute("loginImgUrl", "../images/login.png");
-            model.addAttribute("loginUrl", "/login");
-            model.addAttribute("myPageVisible", "none");
-        }
-        else {
-            model.addAttribute("loginImgUrl", "../images/logout.png");
-            model.addAttribute("loginUrl", "/logout");
-            model.addAttribute("myPageVisible", "flex");
-        }
+        userService.checkLoginIcon(model);
 
         return "homePage";
     }
@@ -30,19 +23,7 @@ public class movePage {
     @GetMapping("/recipes")
     public String recipesPageGoto(Model model){
 
-        String id = SecurityContextHolder.getContext().getAuthentication().getName();
-        model.addAttribute("id", id);
-
-        if(id.equals("anonymousUser")){
-            model.addAttribute("loginImgUrl", "../images/login.png");
-            model.addAttribute("loginUrl", "/login");
-            model.addAttribute("myPageVisible", "none");
-        }
-        else {
-            model.addAttribute("loginImgUrl", "../images/logout.png");
-            model.addAttribute("loginUrl", "/logout");
-            model.addAttribute("myPageVisible", "flex");
-        }
+        userService.checkLoginIcon(model);
 
         return "recipesPage";
     }
@@ -50,28 +31,15 @@ public class movePage {
     @GetMapping("/ingredients")
     public String ingredientsPageGoto(Model model){
 
-        model.addAttribute("loginImgUrl", "../images/logout.png");
-        model.addAttribute("loginUrl", "/logout");
-        model.addAttribute("myPageVisible", "flex");
+        userService.checkLoginIcon(model);
+
         return "ingredientsPage";
     }
 
     @GetMapping("/community")
     public String comunityPageGoto(Model model){
 
-        String id = SecurityContextHolder.getContext().getAuthentication().getName();
-        model.addAttribute("id", id);
-
-        if(id.equals("anonymousUser")){
-            model.addAttribute("loginImgUrl", "../images/login.png");
-            model.addAttribute("loginUrl", "/login");
-            model.addAttribute("myPageVisible", "none");
-        }
-        else {
-            model.addAttribute("loginImgUrl", "../images/logout.png");
-            model.addAttribute("loginUrl", "/logout");
-            model.addAttribute("myPageVisible", "flex");
-        }
+        userService.checkLoginIcon(model);
 
         return "communityPage";
     }
@@ -79,19 +47,7 @@ public class movePage {
     @GetMapping("/customer")
     public String customerPageGoto(Model model){
 
-        String id = SecurityContextHolder.getContext().getAuthentication().getName();
-        model.addAttribute("id", id);
-
-        if(id.equals("anonymousUser")){
-            model.addAttribute("loginImgUrl", "../images/login.png");
-            model.addAttribute("loginUrl", "/login");
-            model.addAttribute("myPageVisible", "none");
-        }
-        else {
-            model.addAttribute("loginImgUrl", "../images/logout.png");
-            model.addAttribute("loginUrl", "/logout");
-            model.addAttribute("myPageVisible", "flex");
-        }
+        userService.checkLoginIcon(model);
 
         return "customerPage";
     }
@@ -99,9 +55,7 @@ public class movePage {
     @GetMapping("/login")
     public String loginPageGoto(Model model){
 
-        model.addAttribute("loginImgUrl", "../images/login.png");
-        model.addAttribute("loginUrl", "/login");
-        model.addAttribute("myPageVisible", "none");
+        userService.checkLoginIcon(model);
 
         return "loginPage";
     }
@@ -109,9 +63,7 @@ public class movePage {
     @GetMapping("/myPage")
     public String myPageGoto(Model model){
 
-        model.addAttribute("loginImgUrl", "../images/logout.png");
-        model.addAttribute("loginUrl", "/logout");
-        model.addAttribute("myPageVisible", "flex");
+        userService.checkLoginIcon(model);
 
         return "myPage";
     }
