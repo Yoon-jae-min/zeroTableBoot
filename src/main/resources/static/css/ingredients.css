@@ -2,18 +2,17 @@ button{
     cursor: pointer;
 }
 
+hr{
+    margin: 0 auto;
+    color: gray;
+    width: 80%;
+}
+
 #ingredientsPage{
     width: 100%;
     height: calc(100vh - 60px);
-    /* overflow: auto; */
     scrollbar-width: thin;
     scrollbar-color: #a8a8a860 #e6e6e6;
-
-    /* margin-top: 30px;
-    margin-left: 3vw; 
-    background-color: #F3EDEC;
-    box-shadow: 0 0 4px 1px rgb(168, 168, 168);
-    border-radius: 20px; */
 }
 
 #searchAndButton{
@@ -148,19 +147,103 @@ button{
     transform: rotate(45deg);
 }
 
+#ingredientsLists{
+    margin: 20px auto;
+    width: 80%;
+    height: auto;
+    max-height: 69%;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 0 0 15px;
+    align-items: flex-start;
+    padding-top: 40px;
+}
+
+.eachIngredient{
+    box-shadow: 0 0 4px 2px rgba(128, 128, 128, 0.56);
+    background-color: #f3edec74;
+    width: 30%;
+    height: 100px;
+    border-radius: 10px;
+    margin: 20px auto 15px;
+    margin-left: 8px;
+    margin-right: 20px;
+    overflow: hidden;
+    transition: 1s all;
+}
+
+.eachIngredient.open{
+    height: 256px;
+}
+
+.eachIngredient p{
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.eachIngredient p:nth-of-type(1){
+    cursor: pointer;
+}
+
+.ingredientDetails{
+    height: 0;
+}
+
+.ingredientDetails li{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.ingredientSetting{
+    display: none;
+}
+
+.updateDeleteButton, .updateButton, .deleteButton, okButton{
+    cursor: pointer;
+    width: 30px;
+}
+
+.updateDeleteContainer, .okButton{
+    display: none;
+}
+
+.updateDeleteButton.buttonClick{
+    display: none;
+}
+
+.updateDeleteContainer.showContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 30%;
+}
+
+
+/*
 
 #ingredientsLists{
     margin: 20px auto;
     width: 90%;
     height: auto;
-    /* overflow: auto; */
+
     display: flex;
     flex-wrap: wrap;
     padding: 0 0 0 15px;
     align-items: flex-start;
     position: relative;
     padding-top: 40px;
-    /* overflow-x: hidden; */
 }
 
 
@@ -175,7 +258,7 @@ button{
     top: 0;
 }
 
-/* PC용 버전 추가 */
+
 
 #attrIngredients{
     display: flex;
@@ -352,12 +435,20 @@ button{
 .ingredientDetails label{
     display: none;
 }
-
+*/
 
 
 
 
 @media (max-width: 767px){
+    .eachIngredient{
+        width: 100%;
+        margin: 0 0 20px;
+    }
+
+
+
+/*
     #ingredientsLists{
         padding-top: 0;
     }
@@ -401,7 +492,6 @@ button{
         height: auto;
         display: none;
         transition: max-height 0.5s ease-out;
-        /* overflow: hidden; */
         max-height: 0;
     }
 
@@ -428,7 +518,7 @@ button{
     .ingredientDetails li:nth-child(4){
         margin-left: 0;
     }
-    
+
     .ingredientDetails li:nth-child(6){
         margin-left: 0;
     }
@@ -442,7 +532,7 @@ button{
         border: 1px solid rgb(211, 211, 211);
         margin: 0 15% 10px;
     }
-    
+
     .eachIngredient.detail .ingredientDetails{
         display: flex;
         max-height: 2000px;
@@ -452,5 +542,5 @@ button{
         width: 80%;
         display: block;
         margin: 0 auto;
-    }
+    }*/
 }
